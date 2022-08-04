@@ -4,9 +4,11 @@ import Link from 'next/link';
 import Avatar from '../images/avatar.png';
 import Netflix from '../images/netflix.png';
 import Image from 'next/image';
+import useAuth from '../hooks/useAuth';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,9 +53,13 @@ function Header() {
         <BellIcon className="hidden sm:inline h-6 w-6" />
 
         <div>
-          <Link href="/account">
-            <Image src={Avatar} className="cursor-pointer rounded" />
-          </Link>
+          {/* <Link href="/account"> */}
+          <Image
+            onClick={() => logout()}
+            src={Avatar}
+            className="cursor-pointer rounded"
+          />
+          {/* </Link> */}
         </div>
       </div>
     </header>
