@@ -12,7 +12,7 @@ type Inputs = {
 };
 
 function Login() {
-  const [login, setLogin] = useState(false);
+  const [isSignIn, setIsSignIn] = useState(true);
   const { signIn, signUp } = useAuth();
 
   const {
@@ -22,7 +22,7 @@ function Login() {
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async ({ email, password }) => {
-    if (login) {
+    if (isSignIn) {
       await signIn(email, password);
     } else {
       await signUp(email, password);
@@ -30,7 +30,7 @@ function Login() {
   };
 
   return (
-    <div className="bg-black md:bg-transparent  md:items-center md:justify-center h-screen w-screen flex flex-col relative">
+    <div className="bg-black md:bg-transparent  md:items-center md:justify-center h-screen w-screen flex flex-col relative select-none">
       <Head>
         <title>Netflix</title>
         <link rel="icon" href="/favicon.ico" />
@@ -39,7 +39,7 @@ function Login() {
       <Image
         src={Background}
         layout="fill"
-        className="!hidden sm:!inline  -z-10 opacity-60 caret-transparent select-none"
+        className="!hidden sm:!inline  -z-10 opacity-60"
         objectFit="cover"
       />
 
@@ -68,12 +68,21 @@ function Login() {
               type="email"
               placeholder="Email"
               className="input"
+              value={
+                !isSignIn
+                  ? `auto_create_account${Math.floor(
+                      Math.random() * 100
+                    )}@random.com`
+                  : undefined
+              }
               {...register('email', { required: true })}
             />
 
             {errors.email && (
               <p className="p-1 text-sm text-orange-500">
-                Please enter a valid email.
+                {isSignIn
+                  ? 'Please enter a valid email'
+                  : 'Oops please click again !'}
               </p>
             )}
           </label>
@@ -102,24 +111,19 @@ function Login() {
 
         {/* ========== ========== ========== ========== ========== ========== */}
 
-        <button
-          className="py-3 w-full rounded bg-[#e50914]"
-          onClick={() => setLogin(true)}
-        >
-          Sign In
+        <button className="py-3 w-full rounded bg-[#e50914]" type="submit">
+          {isSignIn ? 'Log In' : 'Sign Up'}
         </button>
 
         <div>
           <span className="text-[gray]">New to Netflix ? </span>
-          <button
-            type="submit"
-            className="text-white hover:underline"
-            onClick={() => setLogin(false)}
+          <span
+            className="text-white hover:underline cursor-pointer "
+            onClick={() => setIsSignIn(false)}
           >
             Sign up now
-          </button>
+          </span>
         </div>
-
         {/* ========== ========== ========== ========== ========== ========== */}
       </form>
     </div>

@@ -1,6 +1,8 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import Banner from '../components/Banner';
 import Header from '../components/Header';
+import Modal from '../components/Modal';
 import Row from '../components/Row';
 import useAuth from '../hooks/useAuth';
 import { Movie } from '../typings';
@@ -34,8 +36,8 @@ const Home = ({
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Netflix</title>
+        <link rel="icon" href="/netflix.png" />
       </Head>
 
       <Header />
@@ -43,7 +45,7 @@ const Home = ({
       <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         <Banner netflixOriginals={netflixOriginals} />
 
-        <section className="md:space-y-24">
+        <section className="md:space-y-20">
           <Row title="Trending Now" movies={trendingNow} />
           <Row title="Top Rated" movies={topRated} />
           <Row title="Action Thrillers" movies={actionMovies} />
@@ -55,7 +57,7 @@ const Home = ({
         </section>
       </main>
 
-      {/* Modal */}
+      <Modal />
     </div>
   );
 };

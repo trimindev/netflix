@@ -28,12 +28,12 @@ function Header() {
 
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
-      <div className="flex items-center space-x-2 md:space-x-10">
+      <div className="flex items-center space-x-2 md:space-x-10 select-none">
         <Image
           src={Netflix}
           width={100}
           height={25}
-          className="cursor-pointer object-none"
+          className="cursor-pointer object-none "
         />
 
         <ul className="hidden space-x-4 md:flex">
@@ -45,12 +45,12 @@ function Header() {
         </ul>
       </div>
 
-      <div className="flex items-center space-x-4 text-sm font-light">
-        <SearchIcon className="hidden sm:inline h-6 w-6" />
+      <div className="flex items-center space-x-4 text-sm font-light select-none">
+        <SearchIcon className="hidden sm:inline h-6 w-6 cursor-pointer" />
 
-        <p className="hidden lg:inline">Kids</p>
+        <p className="hidden lg:inline  cursor-pointer">Kids</p>
 
-        <BellIcon className="hidden sm:inline h-6 w-6" />
+        <BellIcon className="hidden sm:inline h-6 w-6 cursor-pointer" />
 
         <div>
           {/* <Link href="/account"> */}
