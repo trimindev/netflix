@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <main className="max-w-screen-sm min-h-screen mx-auto">
-      <div className="pb-80 bg-gradient-to-b from-purple-500 to-[#141414]">
+      <div className="pb-80 bg-gradient-to-b from-purple-500 to-[#0f0f0f]">
         <Navbar />
         <div className="px-4">
           <Billboard image={"/11.jpg"} />
