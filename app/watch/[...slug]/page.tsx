@@ -1,3 +1,4 @@
+import Episodes from "@/components/Episodes";
 import Info from "@/components/Info";
 import Navbar from "@/components/Navbar";
 import Video from "@/components/Video";
@@ -9,6 +10,7 @@ function page() {
       <Navbar />
       <Video />
       <Info />
+      <Episodes />
     </div>
   );
 }
