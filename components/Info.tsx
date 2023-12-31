@@ -6,7 +6,7 @@ function Info() {
   return (
     <div className="pt-2 px-3">
       <div className="mb-2">
-        <h1 className="text-2xl font-extrabold">
+        <h1 className="text-3xl font-extrabold">
           Lorem ipsum dolor sit amet consectetur
         </h1>
       </div>
