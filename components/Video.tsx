@@ -15,7 +15,7 @@ function Video() {
           className="!h-full !w-[300%] ml-[-100%] relative pointer-events-none"
           url="https://www.youtube.com/embed/sAH-r7Z6gOQ&rel=0"
           loop={true}
-          playing={false}
+          playing={true}
           muted={muted}
         />
         <button
