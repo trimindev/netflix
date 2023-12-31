@@ -13,7 +13,7 @@ function Info() {
       <div className="mb-2">
         <PlayButton />
       </div>
-      <div className="mb-2">
+      <div className="mb-2 ">
         <p className="text-md">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
           nesciunt ab. Accusamus expedita sed dolorum, nobis vitae eligendi
@@ -21,7 +21,7 @@ function Info() {
           atque!
         </p>
         <div className="text-md flex pr-12 py-1 group">
-          <p className="text-[#b2b2b2] truncate">
+          <p className="text-[#b2b2b2] truncate pointer-events-none">
             <span className="font-semibold">Diễn viên:</span> Lorem ipsum dolor
             sit amet consectetur adipisicing elit. Ab, laboriosam
           </p>
