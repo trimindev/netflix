@@ -1,8 +1,41 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const netflixSans = localFont({
+  src: [
+    {
+      path: "./font/NetflixSans_100.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./font/NetflixSans_300.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./font/NetflixSans_400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./font/NetflixSans_700.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./font/NetflixSans_800.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./font/NetflixSans_900.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={netflixSans.className}>{children}</body>
     </html>
   );
 }
