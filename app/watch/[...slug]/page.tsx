@@ -17,7 +17,7 @@ function page() {
 
   return (
     <div className="max-w-screen-sm min-h-screen mx-auto">
-      <div className="mb-4">
+      <div className="pb-2 mb-2 border-b-2 border-opacity-5 border-white">
         <Navbar />
         <Video />
         <Info />
