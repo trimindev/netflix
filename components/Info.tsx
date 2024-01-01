@@ -21,7 +21,7 @@ function Info({ name, content, cast }: InfoProps) {
         <p className="pointer-events-none text-sm">{content}</p>
         <div className="flex py-1 text-xs cursor-pointer group max-w-xs">
           <p className="text-[#b2b2b2] truncate pointer-events-none pr-2">
-            <span className="font-semibold">Diễn viên:</span>
+            <span className="font-semibold">Diễn viên: </span>
             {cast}...
           </p>
           <button className="group-active:text-red-500 transition-all">
