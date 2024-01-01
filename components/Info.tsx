@@ -1,29 +1,27 @@
 import React from "react";
 import PlayButton from "./PlayButton";
-import Episodes from "./Episodes";
 
-function Info() {
+interface InfoProps {
+  name: string;
+  content: string;
+  tags: string[];
+  cast: string;
+}
+
+function Info({ name, content, cast }: InfoProps) {
   return (
     <div className="pt-2 px-3">
-      <div className="mb-2">
-        <h1 className="text-3xl font-extrabold">
-          Lorem ipsum dolor sit amet consectetur
-        </h1>
+      <div className="mb-4">
+        <h1 className="text-3xl font-extrabold">{name}</h1>
       </div>
       <div className="mb-2">
         <PlayButton />
       </div>
       <div className="font-light mb-2 ">
-        <p className="pointer-events-none text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          nesciunt ab. Accusamus expedita sed dolorum, nobis vitae eligendi
-          quaerat porro quibusdam architecto eum cum iste illum aperiam at, ea
-          atque!
-        </p>
+        <p className="pointer-events-none text-sm">{content}</p>
         <div className="flex pr-12 py-1 text-xs cursor-pointer group">
-          <p className="text-[#b2b2b2] truncate pointer-events-none">
-            <span className="font-semibold">Diễn viên:</span> Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Ab, laboriosam
+          <p className="text-[#b2b2b2] truncate pointer-events-none pr-3">
+            <span className="font-semibold">Diễn viên:</span> {cast}
           </p>
           <button className="group-active:text-red-500 transition-all">
             thêm

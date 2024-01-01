@@ -5,14 +5,14 @@ import dynamic from "next/dynamic";
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from "@heroicons/react/24/outline";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-function Video() {
+function Video({ url }: { url: string }) {
   const [muted, setMuted] = useState(true);
 
   return (
     <div className="overflow-hidden max-w-full aspect-video relative">
       <ReactPlayer
         className="!h-full !w-[300%] ml-[-100%] relative pointer-events-none"
-        url="https://www.youtube.com/embed/sAH-r7Z6gOQ&rel=0"
+        url={url}
         loop={true}
         playing={true}
         muted={muted}

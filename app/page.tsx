@@ -1,29 +1,32 @@
 import Billboard from "@/components/Billboard";
-import ListGenreCard from "@/components/ListGenreCard";
-import LolomoRow from "@/components/LolomoRow";
+import GenreFilmCardList from "@/components/GenreFilmCardList";
 import Navbar from "@/components/Navbar";
+import { FilmInfo, MostWatchData } from "@/lib/filmType";
+import { getMostWatchData, getTVShowInfoList } from "@/lib/filmUtils";
 
-export default function Home() {
-  const koreanFilmImage = [
-    "/11.jpg",
-    "/11.jpg",
-    "/11.jpg",
-    "/11.jpg",
-    "/11.jpg",
-  ];
+export default async function Home(): Promise<JSX.Element> {
+  const TVShowInfoList: FilmInfo[] = await getTVShowInfoList();
+  const MovieInfoList: FilmInfo[] = await getTVShowInfoList();
+
+  const MostWatchData: MostWatchData | null = await getMostWatchData();
+  if (!MostWatchData) return <p>Error fetching most watched data.</p>;
+
+  const { mostWatchMovies, mostWatchTVShows } = MostWatchData;
 
   return (
     <main className="max-w-screen-sm min-h-screen mx-auto">
       <div className="pb-80 bg-gradient-to-b from-purple-500 to-[#0f0f0f]">
         <Navbar />
         <div className="px-4">
-          <Billboard image={"/11.jpg"} />
+          <Billboard films={TVShowInfoList} mostWatchData={mostWatchTVShows} />
         </div>
       </div>
       <section className="-mt-72 pb-40 flex flex-col gap-5">
-        <LolomoRow title={"Phim truyền hình chính kịch Hàn Quốc"}>
-          <ListGenreCard images={koreanFilmImage} />
-        </LolomoRow>
+        <GenreFilmCardList
+          title={"Phim truyền hình chính kịch Hàn Quốc"}
+          films={TVShowInfoList}
+          targetTag="han-quoc"
+        />
       </section>
     </main>
   );

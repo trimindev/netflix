@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 import {
@@ -26,8 +24,8 @@ function Episodes() {
       >
         <CarouselContent className="pl-3 py-2 gap-[1px] ">
           {Array.from({ length: 15 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-10">
-              <EpisodeButton number={index} />
+            <CarouselItem key={index + 1} className="basis-10">
+              <EpisodeButton number={index + 1} />
             </CarouselItem>
           ))}
         </CarouselContent>

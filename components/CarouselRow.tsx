@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import {
   Carousel,
@@ -7,7 +5,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-function LolomoRow({
+function CarouselRow({
   title,
   children,
 }: {
@@ -35,4 +33,4 @@ function LolomoRow({
   );
 }
 
-export default LolomoRow;
+export default CarouselRow;
