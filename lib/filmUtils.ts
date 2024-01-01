@@ -38,14 +38,9 @@ export const getMovieInfoList = async () => {
 };
 
 export const readJsonFile = async (path: string) => {
-  try {
-    const file = await fs.readFile(process.cwd() + path, "utf8");
-    const data = JSON.parse(file);
-    return data;
-  } catch (error) {
-    console.error(`Error reading JSON file at ${path}:`, error);
-    throw error;
-  }
+  const file = await fs.readFile(process.cwd() + path, "utf8");
+  const data = JSON.parse(file);
+  return data;
 };
 
 export const getRandomItemFromArray = (array: string[]) => {
