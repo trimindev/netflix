@@ -18,6 +18,7 @@ async function page({ params }: { params: { id: string } }) {
 
   if (!filmInfo) {
     console.error(`Film with id ${id} not found.`);
+    console.log(filmInfo);
     return <div>Film not found</div>;
   }
 
