@@ -21,7 +21,17 @@ async function page({ params }: { params: { id: string } }) {
     return <div>Film not found</div>;
   }
 
-  const { name, tags, trailerUrl, genre, content, cast } = filmInfo;
+  const {
+    name,
+    tags,
+    trailerUrl,
+    genre,
+    content,
+    cast,
+    episodeUrls,
+    sessionEpisodeUrls,
+    videoUrl,
+  } = filmInfo;
 
   return (
     <div className="max-w-screen-sm min-h-screen mx-auto">

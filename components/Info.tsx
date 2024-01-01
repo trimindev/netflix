@@ -17,11 +17,12 @@ function Info({ name, content, cast }: InfoProps) {
       <div className="mb-2">
         <PlayButton />
       </div>
-      <div className="font-light mb-2 ">
+      <div className="font-light mb-2">
         <p className="pointer-events-none text-sm">{content}</p>
         <div className="flex pr-12 py-1 text-xs cursor-pointer group">
           <p className="text-[#b2b2b2] truncate pointer-events-none pr-3">
-            <span className="font-semibold">Diễn viên:</span> {cast}
+            <span className="font-semibold">Diễn viên:</span>
+            {cast}...
           </p>
           <button className="group-active:text-red-500 transition-all">
             thêm

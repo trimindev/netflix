@@ -1,10 +1,5 @@
-import { MostWatchData, FilmInfo } from "@/lib/filmType";
-import {
-  findFilmById,
-  getMostWatchData,
-  getRandomItemFromArray,
-  getTVShowInfoList,
-} from "@/lib/filmUtils";
+import { FilmInfo } from "@/lib/filmType";
+import { findFilmById, getRandomItemFromArray } from "@/lib/filmUtils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,9 +11,7 @@ interface BillboardProps {
 
 function Billboard({ films, mostWatchData }: BillboardProps) {
   const randomFilmId = getRandomItemFromArray(mostWatchData);
-
   const randomFilmInfo = findFilmById(films, randomFilmId);
-
   if (!randomFilmInfo) return <p>Billboard not found</p>;
 
   const randomFilmPoster = randomFilmInfo.poster1Url;
