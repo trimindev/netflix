@@ -40,7 +40,7 @@ export const getMovieInfoList = async () => {
 
 export const readJsonFile = async (relativePath: string) => {
   try {
-    const absolutePath = path.join(process.cwd(), relativePath);
+    const absolutePath = path.join(relativePath);
     console.log(absolutePath);
     const file = await fs.readFile(absolutePath, "utf8");
     const data = JSON.parse(file);
