@@ -5,7 +5,7 @@ import { MostWatchData, FilmInfo } from "./filmType";
 export const getMostWatchData = async () => {
   try {
     const mostWatchData: MostWatchData = await readJsonFile(
-      "/data/MostWatchData.json"
+      "data/MostWatchData.json"
     );
     return mostWatchData;
   } catch (error) {
@@ -17,7 +17,7 @@ export const getMostWatchData = async () => {
 export const getTVShowInfoList = async () => {
   try {
     const TVShowInfoList: FilmInfo[] = await readJsonFile(
-      "/data/TVShowInfoList.json"
+      "data/TVShowInfoList.json"
     );
     return TVShowInfoList;
   } catch (error) {
@@ -29,7 +29,7 @@ export const getTVShowInfoList = async () => {
 export const getMovieInfoList = async () => {
   try {
     const MovieInfoList: FilmInfo[] = await readJsonFile(
-      "/data/MovieInfoList.json"
+      "data/MovieInfoList.json"
     );
     return MovieInfoList;
   } catch (error) {
@@ -41,6 +41,7 @@ export const getMovieInfoList = async () => {
 export const readJsonFile = async (relativePath: string) => {
   try {
     const absolutePath = path.join(process.cwd(), relativePath);
+    console.log(absolutePath);
     const file = await fs.readFile(absolutePath, "utf8");
     const data = JSON.parse(file);
     return data;
