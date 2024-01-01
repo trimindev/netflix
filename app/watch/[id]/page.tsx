@@ -13,12 +13,10 @@ async function page({ params }: { params: { id: string } }) {
   const TVShowInfoList: FilmInfo[] = await getTVShowInfoList();
   const MovieInfoList: FilmInfo[] = await getTVShowInfoList();
 
-  console.log(TVShowInfoList);
-
   const filmInfo =
-    // findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id);
-    findFilmById(TVShowInfoList, id);
+    findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id);
 
+  console.log(TVShowInfoList);
   if (!filmInfo) {
     console.error(`Film with id ${id} not found.`);
     return <div>Film not found</div>;

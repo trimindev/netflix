@@ -1,11 +1,10 @@
 import { promises as fs } from "fs";
-import path from "path";
 import { MostWatchData, FilmInfo } from "./filmType";
 
 export const getMostWatchData = async () => {
   try {
     const mostWatchData: MostWatchData = await readJsonFile(
-      "data/MostWatchData.json"
+      "/app/data/MostWatchData.json"
     );
     return mostWatchData;
   } catch (error) {
@@ -17,7 +16,7 @@ export const getMostWatchData = async () => {
 export const getTVShowInfoList = async () => {
   try {
     const TVShowInfoList: FilmInfo[] = await readJsonFile(
-      "data/TVShowInfoList.json"
+      "/app/data/TVShowInfoList.json"
     );
     return TVShowInfoList;
   } catch (error) {
@@ -29,7 +28,7 @@ export const getTVShowInfoList = async () => {
 export const getMovieInfoList = async () => {
   try {
     const MovieInfoList: FilmInfo[] = await readJsonFile(
-      "data/MovieInfoList.json"
+      "/app/data/MovieInfoList.json"
     );
     return MovieInfoList;
   } catch (error) {
@@ -38,16 +37,14 @@ export const getMovieInfoList = async () => {
   }
 };
 
-export const readJsonFile = async (relativePath: string) => {
+export const readJsonFile = async (path: string) => {
   try {
-    const absolutePath = path.join(relativePath);
-    console.log(absolutePath);
-    const file = await fs.readFile(relativePath, "utf8");
+    const file = await fs.readFile(process.cwd() + path, "utf8");
     const data = JSON.parse(file);
     return data;
   } catch (error) {
-    console.error(`Error reading JSON file at ${relativePath}:`, error);
-    throw error; // Rethrow the error to propagate it up the call stack
+    console.error(`Error reading JSON file at ${path}:`, error);
+    throw error;
   }
 };
 
