@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import path from "path";
 import { MostWatchData, FilmInfo } from "./filmType";
 
 export const getMostWatchData = async () => {
@@ -37,10 +38,16 @@ export const getMovieInfoList = async () => {
   }
 };
 
-export const readJsonFile = async (path: string) => {
-  const file = await fs.readFile(process.cwd() + path, "utf8");
-  const data = JSON.parse(file);
-  return data;
+export const readJsonFile = async (relativePath: string) => {
+  try {
+    const absolutePath = path.join(process.cwd(), relativePath);
+    const file = await fs.readFile(absolutePath, "utf8");
+    const data = JSON.parse(file);
+    return data;
+  } catch (error) {
+    console.error(`Error reading JSON file at ${relativePath}:`, error);
+    throw error; // Rethrow the error to propagate it up the call stack
+  }
 };
 
 export const getRandomItemFromArray = (array: string[]) => {
