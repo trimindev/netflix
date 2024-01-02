@@ -1,5 +1,5 @@
 import { promises as fs } from "fs";
-import { MostWatchData, FilmInfo } from "./filmType";
+import { MostWatchData, FilmInfo, EpisodeUrl } from "./filmType";
 
 export const getMostWatchData = async () => {
   try {
@@ -63,3 +63,7 @@ export function findFilmByTag(
 ): FilmInfo[] {
   return films.filter((film) => film.tags.includes(targetTag));
 }
+
+export const extractEpisodeNumbers = (episodeUrls: EpisodeUrl[]): string[] => {
+  return episodeUrls.map((episode) => Object.keys(episode)[0]);
+};

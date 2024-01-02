@@ -3,22 +3,19 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
-function EpisodeButton({
-  number,
-  currentEpisode,
-}: {
-  number: number;
-  currentEpisode?: string | null;
-}) {
+function EpisodeButton({ episode }: { episode: string }) {
   const pathname = usePathname();
-  const isActive = currentEpisode === String(number);
+  const searchParams = useSearchParams();
+  const currentEpisode = searchParams.get("episode");
+  const isActive = currentEpisode === episode;
 
   return (
     <Link
       href={{
         pathname: pathname,
-        query: { episode: number },
+        query: { episode: episode },
       }}
     >
       <div
@@ -26,7 +23,7 @@ function EpisodeButton({
           isActive ? "bg-[#2ecc71]" : "bg-[#191919]"
         }`}
       >
-        {number}
+        {episode}
       </div>
     </Link>
   );

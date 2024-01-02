@@ -7,6 +7,7 @@ import React from "react";
 
 import { FilmInfo } from "@/lib/filmType";
 import {
+  extractEpisodeNumbers,
   findFilmById,
   getMovieInfoList,
   getTVShowInfoList,
@@ -39,7 +40,6 @@ async function page({ params, searchParams }: PageProps) {
     content,
     cast,
     episodeUrls,
-    sessionEpisodeUrls,
     videoUrl,
   } = filmInfo;
 
@@ -49,7 +49,7 @@ async function page({ params, searchParams }: PageProps) {
         <Navbar />
         <Video url={trailerUrl} />
         <Info {...{ name, tags, content, cast }} />
-        {!videoUrl && <Episodes />}
+        {/* {!videoUrl && <Episodes episodeList={episodeList} />} */}
       </div>
       <GenreFilmCardList
         title={"Phim truyền hình chính kịch Hàn Quốc"}

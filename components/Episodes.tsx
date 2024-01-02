@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 import {
@@ -11,12 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import EpisodeButton from "./EpisodeButton";
 
-import { useSearchParams } from "next/navigation";
-
-function Episodes() {
-  const searchParams = useSearchParams();
-  const episode = searchParams.get("episode");
-
+function Episodes({ episodeList }: { episodeList: string[] }) {
   return (
     <div>
       <div className="px-3 font-bold text-md">
@@ -30,9 +23,9 @@ function Episodes() {
         }}
       >
         <CarouselContent className="pl-3 py-2 gap-[1px] ">
-          {Array.from({ length: 15 }).map((_, index) => (
-            <CarouselItem key={index + 1} className="basis-10">
-              <EpisodeButton number={index + 1} currentEpisode={episode} />
+          {episodeList.map((episode, index) => (
+            <CarouselItem key={index} className="basis-10">
+              <EpisodeButton episode={episode} />
             </CarouselItem>
           ))}
         </CarouselContent>
