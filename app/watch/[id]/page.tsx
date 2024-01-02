@@ -4,19 +4,28 @@ import GenreFilmCardList from "@/components/GenreFilmCardList";
 import Navbar from "@/components/Navbar";
 import Video from "@/components/Video";
 import React from "react";
-import { FilmInfo } from "@/lib/filmType";
-import { findFilmById, getTVShowInfoList } from "@/lib/filmUtils";
 
-async function page({ params }: { params: { id: string } }) {
+import { FilmInfo } from "@/lib/filmType";
+import {
+  findFilmById,
+  getMovieInfoList,
+  getTVShowInfoList,
+} from "@/lib/filmUtils";
+
+interface PageProps {
+  params: { id: string };
+  searchParams: { session?: string; episode: string } | { video: string };
+}
+
+async function page({ params, searchParams }: PageProps) {
   const { id } = params;
 
   const TVShowInfoList: FilmInfo[] = await getTVShowInfoList();
-  const MovieInfoList: FilmInfo[] = await getTVShowInfoList();
+  const MovieInfoList: FilmInfo[] = await getMovieInfoList();
 
   const filmInfo =
     findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id);
 
-  console.log(TVShowInfoList);
   if (!filmInfo) {
     console.error(`Film with id ${id} not found.`);
     return <div>Film not found</div>;
@@ -40,7 +49,7 @@ async function page({ params }: { params: { id: string } }) {
         <Navbar />
         <Video url={trailerUrl} />
         <Info {...{ name, tags, content, cast }} />
-        <Episodes />
+        {!videoUrl && <Episodes />}
       </div>
       <GenreFilmCardList
         title={"Phim truyền hình chính kịch Hàn Quốc"}
