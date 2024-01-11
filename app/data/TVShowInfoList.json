@@ -1,91 +1,89 @@
 [
-  [
-    {
-      "id": "00000001",
-      "tags": [
-        "han-quoc",
-        "lang-man",
-        "hai-huoc"
-      ],
-      "name": "Chàng Quỷ Của Tôi",
-      "genre": [
-        "Hàn Quốc",
-        "lãng mạn",
-        "hài hước"
-      ],
-      "poster1Url": "https://lh3.googleusercontent.com/u/4/drive-viewer/AEYmBYQw_o5scCSfWXFhPr-BoJGqqXyVCupNmvixCxrT5BpB8ECmVhC3BF1A48_92wjYGA17smD91YD17HOchQgN9WD-I9JMTg=w1454-h991",
-      "trailerUrl": "https://www.youtube.com/watch?v=D-bAfFqvxZg",
-      "content": "Một ác quỷ bỗng mất hết sức mạnh sau khi vướng vào một nữ thừa kế lạnh lùng. Nhưng có thể cô nắm giữ chìa khóa giúp anh tìm lại năng lực đã mất... và mở cửa trái tim anh.",
-      "cast": "Kim Yoo-jung, Song Kang, Lee Sang-yi, Kim Hae-sook",
-      "episodeUrls": [
-        {
-          "1": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
-          "2": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
-          "3": "",
-          "4": "",
-          "5": ""
-        }
-      ]
-    },
-    {
-      "id": "00000002",
-      "tags": [
-        "han-quoc",
-        "hanh-dong",
-        "lich-su",
-        "bi-an",
-        "kinh-di"
-      ],
-      "name": "Sinh Vật GyeongSeong",
-      "genre": [
-        "Hàn Quốc",
-        "kinh dị",
-        "hành động",
-        "lịch sử",
-        "bí ẩn"
-      ],
-      "poster1Url": "https://lh3.googleusercontent.com/u/4/drive-viewer/AEYmBYRXq-ooIhRARtcgz0sdu0cKAZG0idwQIP0qotiXCBfgBS4ctsYI529fA4CGjHKsmKWI7v3_7HWnt5F_oOLClOhn1niafw=w1920-h991",
-      "trailerUrl": "https://www.youtube.com/watch?v=If8JwZZA-Ys",
-      "content": "Đối mặt với khó khăn tài chính, Jang Tae Sang đồng ý truy tìm một người mất tích... nhưng có hai nhân vật theo dõi anh. Trong khi đó, các hoạt động nham hiểm diễn ra dưới lòng đất.",
-      "cast": "Park Seo-joon, Han So-hee,Soo Hyun",
-      "episodeUrls": [
-        {
-          "1": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
-          "2": "",
-          "3": "",
-          "4": "",
-          "5": ""
-        }
-      ]
-    },
-    {
-      "id": "00000003",
-      "tags": [
-        "dai-loan",
-        "lang-man",
-        "hai-huoc",
-        "hanh-dong"
-      ],
-      "name": "Hội Người Nghiện Gội Đầu",
-      "genre": [
-        "Đài Loan",
-        "lãng mạn",
-        "hài hước",
-        "hành động"
-      ],
-      "poster1Url": "https://lh3.googleusercontent.com/u/4/drive-viewer/AEYmBYQnFPyGsbq_I6LFi5wb-CxAqjNasOahlqtQTYjo-Z8CnqdYswzzzcytq86VUeTtgVOUIlN6Hvx9XQKKaiTQpSkZ5K56FQ=w1454-h991",
-      "trailerUrl": "https://www.youtube.com/watch?v=zAWSoj5Vbhg",
-      "content": "Một người học việc ở tiệm làm tóc vô tình cứu mạng một tay xã hội đen. Hành động đó thu hút nhóm khách hàng mới và đẩy cô vào thế giới đầy hỗn loạn.",
-      "cast": "Xuân Phong, Tống Vân Hoa, Kha Chấn Đông, Thái Xương Hiến, Ứng Lãng Phong",
-      "episodeUrls": [
-        {
-          "1": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
-          "2": "",
-          "3": "",
-          "4": "",
-          "5": ""
-        }
-      ]
-    }
-  ]
+  {
+    "id": "00000001",
+    "tags": [
+      "han-quoc",
+      "lang-man",
+      "hai-huoc"
+    ],
+    "name": "Chàng Quỷ Của Tôi",
+    "genre": [
+      "Hàn Quốc",
+      "lãng mạn",
+      "hài hước"
+    ],
+    "poster1Url": "https://lh3.googleusercontent.com/u/4/drive-viewer/AEYmBYQw_o5scCSfWXFhPr-BoJGqqXyVCupNmvixCxrT5BpB8ECmVhC3BF1A48_92wjYGA17smD91YD17HOchQgN9WD-I9JMTg=w1454-h991",
+    "trailerUrl": "https://www.youtube.com/watch?v=D-bAfFqvxZg",
+    "content": "Một ác quỷ bỗng mất hết sức mạnh sau khi vướng vào một nữ thừa kế lạnh lùng. Nhưng có thể cô nắm giữ chìa khóa giúp anh tìm lại năng lực đã mất... và mở cửa trái tim anh.",
+    "cast": "Kim Yoo-jung, Song Kang, Lee Sang-yi, Kim Hae-sook",
+    "episodeUrls": [
+      {
+        "1": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
+        "2": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
+        "3": "",
+        "4": "",
+        "5": ""
+      }
+    ]
+  },
+  {
+    "id": "00000002",
+    "tags": [
+      "han-quoc",
+      "hanh-dong",
+      "lich-su",
+      "bi-an",
+      "kinh-di"
+    ],
+    "name": "Sinh Vật GyeongSeong",
+    "genre": [
+      "Hàn Quốc",
+      "kinh dị",
+      "hành động",
+      "lịch sử",
+      "bí ẩn"
+    ],
+    "poster1Url": "https://lh3.googleusercontent.com/u/4/drive-viewer/AEYmBYRXq-ooIhRARtcgz0sdu0cKAZG0idwQIP0qotiXCBfgBS4ctsYI529fA4CGjHKsmKWI7v3_7HWnt5F_oOLClOhn1niafw=w1920-h991",
+    "trailerUrl": "https://www.youtube.com/watch?v=If8JwZZA-Ys",
+    "content": "Đối mặt với khó khăn tài chính, Jang Tae Sang đồng ý truy tìm một người mất tích... nhưng có hai nhân vật theo dõi anh. Trong khi đó, các hoạt động nham hiểm diễn ra dưới lòng đất.",
+    "cast": "Park Seo-joon, Han So-hee,Soo Hyun",
+    "episodeUrls": [
+      {
+        "1": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": ""
+      }
+    ]
+  },
+  {
+    "id": "00000003",
+    "tags": [
+      "dai-loan",
+      "lang-man",
+      "hai-huoc",
+      "hanh-dong"
+    ],
+    "name": "Hội Người Nghiện Gội Đầu",
+    "genre": [
+      "Đài Loan",
+      "lãng mạn",
+      "hài hước",
+      "hành động"
+    ],
+    "poster1Url": "https://lh3.googleusercontent.com/u/4/drive-viewer/AEYmBYQnFPyGsbq_I6LFi5wb-CxAqjNasOahlqtQTYjo-Z8CnqdYswzzzcytq86VUeTtgVOUIlN6Hvx9XQKKaiTQpSkZ5K56FQ=w1454-h991",
+    "trailerUrl": "https://www.youtube.com/watch?v=zAWSoj5Vbhg",
+    "content": "Một người học việc ở tiệm làm tóc vô tình cứu mạng một tay xã hội đen. Hành động đó thu hút nhóm khách hàng mới và đẩy cô vào thế giới đầy hỗn loạn.",
+    "cast": "Xuân Phong, Tống Vân Hoa, Kha Chấn Đông, Thái Xương Hiến, Ứng Lãng Phong",
+    "episodeUrls": [
+      {
+        "1": "https://rr2---sn-npoe7nz7.c.drive.google.com/videoplayback?expire=1704022820&ei=9CiRZZfhF6XHp84PpZK_0A4&ip=2402:800:6310:a1e6:294e:8fe2:43b7:f844&id=2b3afb29b9b00ff2&itag=22&source=webdrive&requiressl=yes&xpc=EghonaK1InoBAQ==&mh=xl&mm=32&mn=sn-npoe7nz7&ms=su&mv=m&mvi=2&pl=50&ttl=transient&susc=dr&driveid=10-poAmSU7ev7b38TrfJk8LrtZ7-DPy8f&app=explorer&eaua=WIug9EHVF8Q&mime=videoUrl/mp4&vprv=1&prv=1&dur=1304.357&lmt=1682954542413711&mt=1704011801&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,ttl,susc,driveid,app,eaua,mime,vprv,prv,dur,lmt&sig=AJfQdSswRQIhAJZegb51vOcYxyDAFVbAy-as0GiEk4rLNGLy7JcPVqcBAiBB8GsoyRL4dr28FAeaKWCvsxH6p9wOGoxxVmp0WsnnZA==&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AAO5W4owRQIgEUa_8rYvCzF--Kh0RSlAql1-se4oJNO63O1hOFL6hpACIQD9nwbQv7m7_XIbl511gkQvIj3wgR3hXzSP7xR-DPpgIg==&cpn=nHGBfocv_hhCHBhB&c=WEB_EMBEDDED_PLAYER&cver=1.20231217.00.00",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": ""
+      }
+    ]
+  }
 ]
