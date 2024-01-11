@@ -1,4 +1,4 @@
-import Episodes from "@/components/Episodes";
+import EpisodeButtonList from "@/components/EpisodeButtonList";
 import Info from "@/components/Info";
 import GenreFilmCardList from "@/components/GenreFilmCardList";
 import Navbar from "@/components/Navbar";
@@ -7,11 +7,11 @@ import React from "react";
 
 import { FilmInfo } from "@/lib/filmType";
 import {
-  extractEpisodeNumbers,
   findFilmById,
   getMovieInfoList,
   getTVShowInfoList,
 } from "@/lib/filmUtils";
+import Link from "next/link";
 
 interface PageProps {
   params: { id: string };
@@ -36,12 +36,17 @@ async function page({ params, searchParams }: PageProps) {
     name,
     tags,
     trailerUrl,
-    genre,
     content,
     cast,
-    episodeUrls,
+    episodeUrlList,
     videoUrl,
+    sessionTotal,
   } = filmInfo;
+
+  let episodeNumbers: string[] = [];
+  if (episodeUrlList) episodeNumbers = Object.keys(episodeUrlList);
+
+  const isShowEpisodeButtonList = !videoUrl && episodeNumbers.length > 0;
 
   return (
     <div className="max-w-screen-sm min-h-screen mx-auto">
@@ -49,8 +54,19 @@ async function page({ params, searchParams }: PageProps) {
         <Navbar />
         <Video url={trailerUrl} />
         <Info {...{ name, tags, content, cast }} />
-        {/* {!videoUrl && <Episodes episodeList={episodeList} />} */}
+        <div>
+          <div className="flex gap-x-2 px-3 font-bold text-md">
+            <h3>Các tập:</h3>
+            <Link href="/">
+              <div>Mùa 1</div>
+            </Link>
+          </div>
+          {isShowEpisodeButtonList && (
+            <EpisodeButtonList episodeNumbers={episodeNumbers} />
+          )}
+        </div>
       </div>
+
       <GenreFilmCardList
         title={"Phim truyền hình chính kịch Hàn Quốc"}
         films={TVShowInfoList}

@@ -12,12 +12,18 @@ export type FilmInfo = {
 
   trailerUrl: string;
 
-  episodeUrls?: EpisodeUrl[][];
-
   videoUrl?: string;
+
+  episodeUrlList?: EpisodeUrlList;
+
+  sessionTotal?: number;
+  episodeUrlListSession2?: EpisodeUrlList;
+  episodeUrlListSession3?: EpisodeUrlList;
+  episodeUrlListSession4?: EpisodeUrlList;
+  episodeUrlListSession5?: EpisodeUrlList;
 };
 
-export type EpisodeUrl = {
+export type EpisodeUrlList = {
   [episodeNumber: string]: string;
 };
 

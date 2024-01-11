@@ -10,7 +10,7 @@ template filmInfo
 "trailerUrl": "",
 "content": "",
 "cast": "",
-"episodeUrls": [
+"episodeUrlList": [
 {
 "1": ""
 }
