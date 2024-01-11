@@ -12,6 +12,7 @@ interface BillboardProps {
 function Billboard({ films, mostWatchData }: BillboardProps) {
   const randomFilmId = getRandomItemFromArray(mostWatchData);
   const randomFilmInfo = findFilmById(films, randomFilmId);
+
   if (!randomFilmInfo) return <p>Billboard not found</p>;
 
   const randomFilmPoster = randomFilmInfo.poster1Url;

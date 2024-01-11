@@ -61,7 +61,7 @@ export function findFilmByTag(
   films: FilmInfo[],
   targetTag: string
 ): FilmInfo[] {
-  return films.filter((film) => film.tags.includes(targetTag));
+  return films.filter((film) => film.tags?.includes(targetTag));
 }
 
 export const extractEpisodeNumbers = (episodeUrls: EpisodeUrl[]): string[] => {
