@@ -2,13 +2,13 @@ import Billboard from "@/components/Billboard";
 import GenreFilmCardList from "@/components/GenreFilmCardList";
 import Navbar from "@/components/Navbar";
 import { FilmInfo, MostWatchData } from "@/lib/filmType";
-import { getMostWatchData, getTVShowInfoList } from "@/lib/filmUtils";
+import { fetchMostWatchData, fetchTVShowInfoList } from "@/lib/filmUtils";
 
 export default async function Home(): Promise<JSX.Element> {
-  const TVShowInfoList: FilmInfo[] = await getTVShowInfoList();
-  const MovieInfoList: FilmInfo[] = await getTVShowInfoList();
+  const TVShowInfoList: FilmInfo[] = await fetchTVShowInfoList();
+  const MovieInfoList: FilmInfo[] = await fetchTVShowInfoList();
 
-  const MostWatchData: MostWatchData | null = await getMostWatchData();
+  const MostWatchData: MostWatchData | null = await fetchMostWatchData();
   if (!MostWatchData) return <p>Error fetching most watched data.</p>;
 
   const { mostWatchMovies, mostWatchTVShows } = MostWatchData;

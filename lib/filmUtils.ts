@@ -1,46 +1,70 @@
 import { promises as fs } from "fs";
 import { MostWatchData, FilmInfo, EpisodeUrlList } from "./filmType";
 
-export const getMostWatchData = async () => {
+const FILM_DATA_HOST = "https://film-data.vercel.app";
+
+const constructFilmDataUrl = (path: string) => `${FILM_DATA_HOST}/${path}`;
+
+const MOST_WATCH_DATA_URL = constructFilmDataUrl("MostWatchData.json");
+const TV_SHOW_INFO_LIST_URL = constructFilmDataUrl("TVShowInfoList.json");
+const MOVIE_INFO_LIST_URL = constructFilmDataUrl("MovieInfoList.json");
+
+export const fetchMostWatchData = async () => {
   try {
-    const mostWatchData: MostWatchData = await readJsonFile(
-      "/app/data/MostWatchData.json"
+    const mostWatchData: MostWatchData = await fetchDataFromUrl(
+      MOST_WATCH_DATA_URL
     );
     return mostWatchData;
   } catch (error) {
-    console.error("Error fetching most watched data:", error);
+    console.error(
+      `Error fetching most watched data from ${MOST_WATCH_DATA_URL}:`,
+      error
+    );
     return null;
   }
 };
 
-export const getTVShowInfoList = async () => {
+export const fetchTVShowInfoList = async () => {
   try {
-    const TVShowInfoList: FilmInfo[] = await readJsonFile(
-      "/app/data/TVShowInfoList.json"
+    const TVShowInfoList: FilmInfo[] = await fetchDataFromUrl(
+      TV_SHOW_INFO_LIST_URL
     );
     return TVShowInfoList;
   } catch (error) {
-    console.error("Error fetching TV show info list:", error);
+    console.error(
+      `Error fetching TV show info list from ${TV_SHOW_INFO_LIST_URL}:`,
+      error
+    );
     return [];
   }
 };
 
 export const getMovieInfoList = async () => {
   try {
-    const MovieInfoList: FilmInfo[] = await readJsonFile(
-      "/app/data/MovieInfoList.json"
+    const MovieInfoList: FilmInfo[] = await fetchDataFromUrl(
+      MOVIE_INFO_LIST_URL
     );
     return MovieInfoList;
   } catch (error) {
-    console.error("Error fetching TV show info list:", error);
+    console.error(
+      `Error fetching Movie info list from ${MOVIE_INFO_LIST_URL}:`,
+      error
+    );
     return [];
   }
 };
 
-export const readJsonFile = async (path: string) => {
-  const file = await fs.readFile(process.cwd() + path, "utf8");
-  const data = JSON.parse(file);
-  return data;
+export const fetchDataFromUrl = async (url: string) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data. Status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(`Failed to fetch data from ${url}:`, error);
+    throw error;
+  }
 };
 
 export const getRandomItemFromArray = (array: string[]) => {

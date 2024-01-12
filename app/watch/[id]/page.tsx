@@ -9,7 +9,7 @@ import { FilmInfo } from "@/lib/filmType";
 import {
   findFilmById,
   getMovieInfoList,
-  getTVShowInfoList,
+  fetchTVShowInfoList,
 } from "@/lib/filmUtils";
 import Link from "next/link";
 
@@ -21,7 +21,7 @@ interface PageProps {
 async function page({ params, searchParams }: PageProps) {
   const { id } = params;
 
-  const TVShowInfoList: FilmInfo[] = await getTVShowInfoList();
+  const TVShowInfoList: FilmInfo[] = await fetchTVShowInfoList();
   const MovieInfoList: FilmInfo[] = await getMovieInfoList();
 
   const filmInfo =
