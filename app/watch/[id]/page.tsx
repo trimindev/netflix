@@ -11,7 +11,7 @@ import {
   getMovieInfoList,
   fetchTVShowInfoList,
 } from "@/lib/filmUtils";
-import Link from "next/link";
+import SessionSelect from "@/components/SessionSelect";
 
 interface PageProps {
   params: { id: string };
@@ -62,11 +62,11 @@ async function page({ params, searchParams }: PageProps) {
         {filmURL && <Video url={filmURL} />}
         <Info {...{ name, tags, content, cast }} />
         <div>
-          <div className="flex gap-x-1 px-3 font-bold text-md">
+          <div className="flex items-center gap-x-2 px-3 mb-2 font-bold text-md">
             <h3>Các tập:</h3>
-            <Link href="/">
-              <div className="">Mùa 1</div>
-            </Link>
+            {sessionTotal && (
+              <SessionSelect sessionTotal={sessionTotal} currentSession={1} />
+            )}
           </div>
           {isTVShow && <EpisodeButtonList episodeNumbers={episodeNumbers} />}
         </div>
