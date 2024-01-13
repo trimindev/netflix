@@ -44,7 +44,7 @@ async function page({ params, searchParams }: PageProps) {
     sessionTotal,
   } = filmInfo;
 
-  const isTVShow = !videoUrl;
+  const isTVShow = !videoUrl && episodeUrlList;
 
   let filmURL;
   if ((searchParams = {})) filmURL = trailerUrl;
