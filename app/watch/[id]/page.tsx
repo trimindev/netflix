@@ -61,15 +61,17 @@ async function page({ params, searchParams }: PageProps) {
         <Navbar />
         {filmURL && <Video url={filmURL} />}
         <Info {...{ name, tags, content, cast }} />
-        <div>
-          <div className="flex items-center gap-x-2 px-3 mb-2 font-bold text-md">
-            <h3>Các tập:</h3>
-            {sessionTotal && (
-              <SessionSelect sessionTotal={sessionTotal} currentSession={1} />
-            )}
-          </div>
-          {isTVShow && <EpisodeButtonList episodeNumbers={episodeNumbers} />}
-        </div>
+        {isTVShow && (
+          <>
+            <div className="flex items-center gap-x-2 px-3 mb-2 font-bold text-md">
+              <h3>Các tập:</h3>
+              {sessionTotal && (
+                <SessionSelect sessionTotal={sessionTotal} currentSession={1} />
+              )}
+            </div>
+            <EpisodeButtonList episodeNumbers={episodeNumbers} />
+          </>
+        )}
       </div>
 
       <GenreFilmCardList
