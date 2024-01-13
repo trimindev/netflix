@@ -15,17 +15,18 @@ import Link from "next/link";
 
 interface PageProps {
   params: { id: string };
-  searchParams: { ss?: string; ep?: string } | { movie?: string };
+  searchParams: { ss?: string; ep?: string; playing?: boolean };
 }
 
 async function page({ params, searchParams }: PageProps) {
   const { id } = params;
+  const { ss, ep, playing } = searchParams;
 
   const TVShowInfoList: FilmInfo[] = await fetchTVShowInfoList();
   const MovieInfoList: FilmInfo[] = await getMovieInfoList();
 
   const filmInfo =
-    findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id);
+    findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id); // fix only use 1 info list later
 
   if (!filmInfo) {
     console.error(`Film with id ${id} not found.`);
@@ -43,17 +44,23 @@ async function page({ params, searchParams }: PageProps) {
     sessionTotal,
   } = filmInfo;
 
+  const isTVShow = !videoUrl;
+
+  let filmURL;
+  if ((searchParams = {})) filmURL = trailerUrl;
+  if (playing && isTVShow && episodeUrlList)
+    filmURL = Object.values(episodeUrlList)[0];
+  if (playing && !isTVShow) filmURL = videoUrl;
+
   let episodeNumbers: string[] = [];
   if (episodeUrlList) episodeNumbers = Object.keys(episodeUrlList);
-
-  const isTVShow = !videoUrl && episodeNumbers.length > 0;
 
   return (
     <div className="max-w-screen-sm min-h-screen mx-auto">
       <div className="pb-2 mb-2 border-b-2 border-opacity-5 border-white">
         <Navbar />
-        <Video url={trailerUrl} />
-        <Info {...{ name, tags, content, cast, isTVShow }} />
+        {filmURL && <Video url={filmURL} />}
+        <Info {...{ name, tags, content, cast }} />
         <div>
           <div className="flex gap-x-2 px-3 font-bold text-md">
             <h3>Các tập:</h3>
