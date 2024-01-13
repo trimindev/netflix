@@ -62,10 +62,10 @@ async function page({ params, searchParams }: PageProps) {
         {filmURL && <Video url={filmURL} />}
         <Info {...{ name, tags, content, cast }} />
         <div>
-          <div className="flex gap-x-2 px-3 font-bold text-md">
+          <div className="flex gap-x-1 px-3 font-bold text-md">
             <h3>Các tập:</h3>
             <Link href="/">
-              <div>Mùa 1</div>
+              <div className="">Mùa 1</div>
             </Link>
           </div>
           {isTVShow && <EpisodeButtonList episodeNumbers={episodeNumbers} />}
