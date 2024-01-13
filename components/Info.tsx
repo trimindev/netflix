@@ -6,16 +6,17 @@ interface InfoProps {
   content: string;
   tags: string[];
   cast: string;
+  isTVShow: boolean;
 }
 
-function Info({ name, content, cast }: InfoProps) {
+function Info({ name, content, cast, isTVShow }: InfoProps) {
   return (
     <div className="pt-2 px-3">
       <div className="mb-4">
         <h1 className="text-3xl font-extrabold">{name}</h1>
       </div>
       <div className="mb-2">
-        <PlayButton />
+        <PlayButton isTVShow={isTVShow} />
       </div>
       <div className="font-light mb-2">
         <p className="pointer-events-none text-sm">{content}</p>

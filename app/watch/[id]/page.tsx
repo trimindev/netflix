@@ -15,7 +15,7 @@ import Link from "next/link";
 
 interface PageProps {
   params: { id: string };
-  searchParams: { session?: string; episode: string } | { video: string };
+  searchParams: { ss?: string; ep?: string } | { movie?: string };
 }
 
 async function page({ params, searchParams }: PageProps) {
@@ -46,14 +46,14 @@ async function page({ params, searchParams }: PageProps) {
   let episodeNumbers: string[] = [];
   if (episodeUrlList) episodeNumbers = Object.keys(episodeUrlList);
 
-  const isShowEpisodeButtonList = !videoUrl && episodeNumbers.length > 0;
+  const isTVShow = !videoUrl && episodeNumbers.length > 0;
 
   return (
     <div className="max-w-screen-sm min-h-screen mx-auto">
       <div className="pb-2 mb-2 border-b-2 border-opacity-5 border-white">
         <Navbar />
         <Video url={trailerUrl} />
-        <Info {...{ name, tags, content, cast }} />
+        <Info {...{ name, tags, content, cast, isTVShow }} />
         <div>
           <div className="flex gap-x-2 px-3 font-bold text-md">
             <h3>Các tập:</h3>
@@ -61,9 +61,7 @@ async function page({ params, searchParams }: PageProps) {
               <div>Mùa 1</div>
             </Link>
           </div>
-          {isShowEpisodeButtonList && (
-            <EpisodeButtonList episodeNumbers={episodeNumbers} />
-          )}
+          {isTVShow && <EpisodeButtonList episodeNumbers={episodeNumbers} />}
         </div>
       </div>
 
