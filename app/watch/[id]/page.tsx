@@ -26,7 +26,7 @@ async function page({ params, searchParams }: PageProps) {
   const MovieInfoList: FilmInfo[] = await getMovieInfoList();
 
   const filmInfo =
-    findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id); // fix only use 1 info list later
+    findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id);
 
   if (!filmInfo) {
     console.error(`Film with id ${id} not found.`);
@@ -48,7 +48,6 @@ async function page({ params, searchParams }: PageProps) {
     const episodeUrlList = sessionList[currentSession];
 
     episodeList = Object.keys(episodeUrlList).map(Number);
-
     filmURL = episodeUrlList[currentEpisode];
   } else filmURL = movieUrl;
 
