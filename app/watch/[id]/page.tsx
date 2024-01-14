@@ -42,11 +42,11 @@ async function page({ params, searchParams }: PageProps) {
   if (isTVShow) {
     currentSession = Number(ss) || 1;
     currentEpisode = Number(ep) || 1;
-    episodeList = Object.keys(sessionList).map(Number);
     sessionTotal = Object.keys(sessionList).length;
     if (sessionTotal == 1) sessionTotal = undefined;
 
     const episodeUrlList = Object.values(sessionList)[currentSession - 1];
+    episodeList = Object.keys(episodeUrlList).map(Number);
     filmURL = Object.values(episodeUrlList)[currentEpisode - 1];
   } else filmURL = movieUrl;
 
