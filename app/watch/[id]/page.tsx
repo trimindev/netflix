@@ -50,7 +50,7 @@ async function page({ params, searchParams }: PageProps) {
     filmURL = Object.values(episodeUrlList)[currentEpisode - 1];
   } else filmURL = movieUrl;
 
-  const isPlay = ep || playing;
+  const isPlay = ep || ss || playing;
   const videoUrl = isPlay ? filmURL : trailerUrl;
 
   return (
