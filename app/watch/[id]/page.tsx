@@ -45,9 +45,11 @@ async function page({ params, searchParams }: PageProps) {
     sessionTotal = Object.keys(sessionList).length;
     if (sessionTotal == 1) sessionTotal = undefined;
 
-    const episodeUrlList = Object.values(sessionList)[currentSession - 1];
+    const episodeUrlList = sessionList[currentSession];
+
     episodeList = Object.keys(episodeUrlList).map(Number);
-    filmURL = Object.values(episodeUrlList)[currentEpisode - 1];
+
+    filmURL = episodeUrlList[currentEpisode];
   } else filmURL = movieUrl;
 
   const isPlay = ep || ss || playing;
