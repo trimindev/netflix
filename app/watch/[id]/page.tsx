@@ -42,8 +42,9 @@ async function page({ params, searchParams }: PageProps) {
   if (isTVShow) {
     currentSession = Number(ss) || 1;
     currentEpisode = Number(ep) || 1;
-    episodeList = Object.keys(sessionList);
+    episodeList = Object.keys(sessionList).map(Number);
     sessionTotal = Object.keys(sessionList).length;
+    if (sessionTotal == 1) sessionTotal = undefined;
 
     const episodeUrlList = Object.values(sessionList)[currentSession - 1];
     filmURL = Object.values(episodeUrlList)[currentEpisode - 1];
@@ -63,13 +64,14 @@ async function page({ params, searchParams }: PageProps) {
             <div className="flex items-center gap-x-2 px-3 mb-2 font-bold text-md">
               <h3>Các tập:</h3>
               {sessionTotal && currentSession && (
-                <SessionSelect
-                  sessionTotal={sessionTotal}
-                  currentSession={currentSession}
-                />
+                <SessionSelect {...{ sessionTotal, currentSession }} />
               )}
             </div>
-            {episodeList && <EpisodeButtonList episodeList={episodeList} />}
+            {episodeList && currentEpisode && currentSession && (
+              <EpisodeButtonList
+                {...{ episodeList, currentEpisode, currentSession }}
+              />
+            )}
           </>
         )}
       </div>

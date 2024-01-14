@@ -5,25 +5,26 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
-function EpisodeButton({
-  episodeNumber,
-  sessionNumber,
-}: {
-  episodeNumber: string;
-  sessionNumber?: string;
-}) {
+interface PageProps {
+  // currentSession: number;
+  // currentEpisode: number;
+  episodeNumber: number;
+}
+
+function EpisodeButton({ episodeNumber }: PageProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const currentEpisode = searchParams.get("episode");
-  const isActive = currentEpisode === episodeNumber;
+  const currentEpisode = searchParams.get("ep");
+  const currentSession = searchParams.get("ss");
+  const isActive = Number(currentEpisode) == episodeNumber;
 
   return (
     <Link
       href={{
         pathname: pathname,
         query: {
+          ...(currentSession && { ss: currentSession }),
           ep: episodeNumber,
-          ...(sessionNumber && { ss: sessionNumber }),
         },
       }}
     >
