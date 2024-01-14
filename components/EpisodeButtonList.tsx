@@ -9,13 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import EpisodeButton from "./EpisodeButton";
 
-function EpisodeButtonList({
-  episodeNumbers,
-  sessionNumber,
-}: {
-  episodeNumbers: string[];
-  sessionNumber?: string;
-}) {
+function EpisodeButtonList({ episodeList }: { episodeList: string[] }) {
   return (
     <Carousel
       opts={{
@@ -25,7 +19,7 @@ function EpisodeButtonList({
       }}
     >
       <CarouselContent className="pl-3 py-2 gap-[1px] ">
-        {episodeNumbers.map((episodeNumber, index) => (
+        {episodeList.map((episodeNumber, index) => (
           <CarouselItem key={index} className="basis-10">
             <EpisodeButton episodeNumber={episodeNumber} />
           </CarouselItem>

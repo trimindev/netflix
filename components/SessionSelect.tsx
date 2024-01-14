@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 
 import {
@@ -9,7 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/SessionSelect";
-import { SelectSeparator } from "@radix-ui/react-select";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface PageProps {
   sessionTotal: number;
@@ -17,8 +19,17 @@ interface PageProps {
 }
 
 function SessionSelect({ sessionTotal, currentSession }: PageProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+
   return (
-    <Select>
+    <Select
+      defaultValue={String(currentSession)}
+      onValueChange={(session) => {
+        console.log(session);
+        router.push(`${pathname}?ss=${session}`);
+      }}
+    >
       <SelectTrigger>
         <SelectValue placeholder={`Mùa ${currentSession}`} />
       </SelectTrigger>
