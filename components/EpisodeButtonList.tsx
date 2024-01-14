@@ -11,15 +11,9 @@ import EpisodeButton from "./EpisodeButton";
 
 interface PageProps {
   episodeList: number[];
-  currentSession: number;
-  currentEpisode: number;
 }
 
-function EpisodeButtonList({
-  episodeList,
-  currentSession,
-  currentEpisode,
-}: PageProps) {
+function EpisodeButtonList({ episodeList }: PageProps) {
   return (
     <Carousel
       opts={{

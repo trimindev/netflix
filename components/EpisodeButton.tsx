@@ -6,8 +6,6 @@ import { usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
 interface PageProps {
-  // currentSession: number;
-  // currentEpisode: number;
   episodeNumber: number;
 }
 

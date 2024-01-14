@@ -68,9 +68,7 @@ async function page({ params, searchParams }: PageProps) {
               )}
             </div>
             {episodeList && currentEpisode && currentSession && (
-              <EpisodeButtonList
-                {...{ episodeList, currentEpisode, currentSession }}
-              />
+              <EpisodeButtonList {...{ episodeList }} />
             )}
           </>
         )}
