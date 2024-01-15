@@ -28,7 +28,7 @@ function EpisodeButton({ episodeNumber }: PageProps) {
     >
       <div
         className={`w-8 h-8 font-bold rounded-lg flex items-center justify-center transition-all ${
-          isActive ? "bg-white bg-opacity-10" : "bg-[#191919]"
+          isActive ? "bg-white/10" : "bg-[#191919]"
         }`}
       >
         {episodeNumber}

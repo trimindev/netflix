@@ -19,7 +19,7 @@ function Billboard({ films, mostWatchData }: BillboardProps) {
 
   return (
     <Link href={`/watch/${randomFilmId}`}>
-      <div className="relative w-full aspect-[112.67/160.97] border-[1px] border-opacity-30 border-white rounded-xl overflow-hidden shadow-2xl shadow-black active:scale-[.98] transition-all">
+      <div className="relative w-full aspect-[112.67/160.97] border-[1px] border-white/30 rounded-xl overflow-hidden shadow-2xl shadow-black active:scale-[.98] transition-all">
         <Image src={randomFilmPoster} fill={true} alt="Billboard Poster" />
       </div>
     </Link>

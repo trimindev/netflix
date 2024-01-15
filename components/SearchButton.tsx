@@ -6,7 +6,7 @@ function SearchButton() {
   return (
     <Link
       href="/"
-      className="p-2 -mr-2 rounded-full active:bg-black active:bg-opacity-10 transition-all"
+      className="p-2 -mr-2 rounded-full active:bg-black/10 transition-all"
     >
       <MagnifyingGlassIcon className="h-6 w-6" />
     </Link>

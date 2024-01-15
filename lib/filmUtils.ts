@@ -8,6 +8,7 @@ const constructFilmDataUrl = (path: string) => `${FILM_DATA_HOST}/${path}`;
 const MOST_WATCH_DATA_URL = constructFilmDataUrl("MostWatchData.json");
 const TV_SHOW_INFO_LIST_URL = constructFilmDataUrl("TVShowInfoList.json");
 const MOVIE_INFO_LIST_URL = constructFilmDataUrl("MovieInfoList.json");
+const GENRE_LIST_URL = constructFilmDataUrl("GenreList.json");
 
 export const fetchMostWatchData = async () => {
   try {
@@ -39,7 +40,7 @@ export const fetchTVShowInfoList = async () => {
   }
 };
 
-export const getMovieInfoList = async () => {
+export const fetchMovieInfoList = async () => {
   try {
     const MovieInfoList: FilmInfo[] = await fetchDataFromUrl(
       MOVIE_INFO_LIST_URL
@@ -50,6 +51,16 @@ export const getMovieInfoList = async () => {
       `Error fetching Movie info list from ${MOVIE_INFO_LIST_URL}:`,
       error
     );
+    return [];
+  }
+};
+
+export const fetchGenreList = async () => {
+  try {
+    const genreList = await fetchDataFromUrl(GENRE_LIST_URL);
+    return genreList;
+  } catch (error) {
+    console.error(`Error fetching Genre list from ${GENRE_LIST_URL}:`, error);
     return [];
   }
 };

@@ -7,3 +7,9 @@
     @apply bg-[#0f0f0f] text-[#ffffff];
   }
 }
+
+@layer components {
+  .nav-button {
+    @apply flex items-center h-8 px-3 text-sm rounded-full border-[1px] border-white/80 active:bg-black/10 transition-all;
+  }
+}

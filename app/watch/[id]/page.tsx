@@ -8,7 +8,7 @@ import React from "react";
 import { FilmInfo } from "@/lib/filmType";
 import {
   findFilmById,
-  getMovieInfoList,
+  fetchMovieInfoList,
   fetchTVShowInfoList,
 } from "@/lib/filmUtils";
 import SessionSelect from "@/components/SessionSelect";
@@ -23,7 +23,7 @@ async function page({ params, searchParams }: PageProps) {
   const { ss, ep, playing } = searchParams;
 
   const TVShowInfoList: FilmInfo[] = await fetchTVShowInfoList();
-  const MovieInfoList: FilmInfo[] = await getMovieInfoList();
+  const MovieInfoList: FilmInfo[] = await fetchMovieInfoList();
 
   const filmInfo =
     findFilmById(TVShowInfoList, id) || findFilmById(MovieInfoList, id);
@@ -56,7 +56,7 @@ async function page({ params, searchParams }: PageProps) {
 
   return (
     <div className="max-w-screen-sm min-h-screen mx-auto">
-      <div className="pb-2 mb-2 border-b-2 border-opacity-5 border-white">
+      <div className="pb-2 mb-2 border-b-2 border-white/5">
         <Navbar />
         {videoUrl && <Video url={videoUrl} />}
         <Info {...{ name, tags, content, cast }} />
