@@ -3,29 +3,58 @@ import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+  DialogClose,
+} from "@/components/ui/GenreDialog";
+import Link from "next/link";
 
 export function GenreButton() {
   return (
     <Dialog>
       <DialogTrigger>
-        <button className="nav-button">
+        <div className="nav-button">
           <span>Thể Loại</span>
           <ChevronDownIcon className="w-4 h-4 ml-1" />
-        </button>
+        </div>
       </DialogTrigger>
-      <DialogContent className="w-screen h-screen">
-        <DialogHeader>
-          <DialogTitle>Are you absolutely sure?</DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </DialogDescription>
-        </DialogHeader>
+      <DialogContent className="">
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <Link href="/">Anime</Link>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <div>fsdf</div>
+        <DialogClose />
       </DialogContent>
     </Dialog>
   );
