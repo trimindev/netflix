@@ -100,19 +100,29 @@ export const getRandomItemFromArray = (array: string[]) => {
 
 export const getRandomMostWatchFilm = async (typeFilm: TypeFilm) => {
   const mostWatchData = await fetchMostWatchData();
+  const TVShowInfoList = await fetchTVShowInfoList();
+  const movieInfoList = await fetchMovieInfoList();
 
   if (!mostWatchData) return;
 
   const { mostWatchMovies, mostWatchTVShows } = mostWatchData;
 
   let mostWatchFilms;
-  if (typeFilm == "movie") mostWatchFilms = mostWatchMovies;
-  if (typeFilm == "tvshow") mostWatchFilms = mostWatchTVShows;
-
-  if (!mostWatchFilms) return;
+  let filmInfoList;
+  if (typeFilm == "movie") {
+    mostWatchFilms = mostWatchMovies;
+    filmInfoList = movieInfoList;
+  }
+  if (typeFilm == "tvshow") {
+    mostWatchFilms = mostWatchTVShows;
+    filmInfoList = TVShowInfoList;
+  }
+  if (!mostWatchFilms || !filmInfoList) return;
 
   const randomFilmId = getRandomItemFromArray(mostWatchFilms);
-  const randomFilmInfo = findFilmById(films, randomFilmId);
+  const randomFilmInfo = findFilmById(filmInfoList, randomFilmId);
+
+  return randomFilmInfo;
 };
 
 export const getRandomFilmFromList = (filmList: FilmInfo[]) => {
