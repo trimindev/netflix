@@ -1,3 +1,5 @@
+import exp from "constants";
+
 export type FilmInfo = {
   id: string;
   tags: string[];
@@ -23,6 +25,13 @@ export type SessionList = {
 
 export type EpisodeUrlList = {
   [episodeNumber: string]: string;
+};
+
+export type TypeFilm = "movie" | "tvshow" | undefined;
+
+export type GenreList = {
+  genre: string;
+  tags: string[];
 };
 
 export type MostWatchData = {

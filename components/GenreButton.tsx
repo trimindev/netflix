@@ -6,55 +6,37 @@ import {
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/GenreDialog";
-import Link from "next/link";
+import { fetchGenreList } from "@/lib/filmUtils";
+import { TypeFilm } from "@/lib/filmType";
 
-export function GenreButton() {
+interface PageProps {
+  name: string;
+  typeFilm: TypeFilm;
+}
+
+export async function GenreButton({ name, typeFilm }: PageProps) {
+  const GenreList = await fetchGenreList();
+
   return (
     <Dialog>
       <DialogTrigger>
         <div className="nav-button">
-          <span>Thể Loại</span>
+          <span>{name}</span>
           <ChevronDownIcon className="w-4 h-4 ml-1" />
         </div>
       </DialogTrigger>
-      <DialogContent className="">
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <Link href="/">Anime</Link>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <div>fsdf</div>
-        <DialogClose />
+      <DialogContent className="pt-12 pb-8 px-4 w-11/12 bg-[#0f0f0f] text-white/80 shadow-md rounded-md">
+        <div className="flex gap-3 flex-wrap">
+          {GenreList &&
+            GenreList.map(({ genre, tags }, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center h-10 px-3 py-1 border border-white/80 rounded-md "
+              >
+                {genre}
+              </div>
+            ))}
+        </div>
       </DialogContent>
     </Dialog>
   );

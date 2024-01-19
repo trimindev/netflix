@@ -1,5 +1,11 @@
 import { promises as fs } from "fs";
-import { MostWatchData, FilmInfo, EpisodeUrlList } from "./filmType";
+import {
+  MostWatchData,
+  FilmInfo,
+  EpisodeUrlList,
+  GenreList,
+  TypeFilm,
+} from "./filmType";
 
 const FILM_DATA_HOST = "https://film-data.vercel.app";
 
@@ -55,9 +61,18 @@ export const fetchMovieInfoList = async () => {
   }
 };
 
+export const fetchFilmInfoList = async () => {
+  const TVShowInfoList = await fetchTVShowInfoList();
+  const movieInfoList = await fetchMovieInfoList();
+
+  const filmInfoList = [...TVShowInfoList, ...movieInfoList];
+
+  return filmInfoList;
+};
+
 export const fetchGenreList = async () => {
   try {
-    const genreList = await fetchDataFromUrl(GENRE_LIST_URL);
+    const genreList: GenreList[] = await fetchDataFromUrl(GENRE_LIST_URL);
     return genreList;
   } catch (error) {
     console.error(`Error fetching Genre list from ${GENRE_LIST_URL}:`, error);
@@ -81,6 +96,23 @@ export const fetchDataFromUrl = async (url: string) => {
 export const getRandomItemFromArray = (array: string[]) => {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
+};
+
+export const getRandomMostWatchFilm = async (typeFilm: TypeFilm) => {
+  const mostWatchData = await fetchMostWatchData();
+
+  if (!mostWatchData) return;
+
+  const { mostWatchMovies, mostWatchTVShows } = mostWatchData;
+
+  let mostWatchFilms;
+  if (typeFilm == "movie") mostWatchFilms = mostWatchMovies;
+  if (typeFilm == "tvshow") mostWatchFilms = mostWatchTVShows;
+
+  if (!mostWatchFilms) return;
+
+  const randomFilmId = getRandomItemFromArray(mostWatchFilms);
+  const randomFilmInfo = findFilmById(films, randomFilmId);
 };
 
 export const getRandomFilmFromList = (filmList: FilmInfo[]) => {

@@ -12,4 +12,13 @@
   .nav-button {
     @apply flex items-center h-8 px-3 text-sm rounded-full border-[1px] border-white/80 active:bg-black/10 transition-all;
   }
+  .nav {
+    @apply px-3 py-2;
+  }
+  .nav-row-1 {
+    @apply h-10 flex justify-between items-center;
+  }
+  .nav-row-2 {
+    @apply flex gap-x-2 pb-2 pt-1;
+  }
 }

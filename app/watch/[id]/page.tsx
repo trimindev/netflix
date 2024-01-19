@@ -57,7 +57,7 @@ async function page({ params, searchParams }: PageProps) {
   return (
     <div className="max-w-screen-sm min-h-screen mx-auto">
       <div className="pb-2 mb-2 border-b-2 border-white/5">
-        <Navbar />
+        <Navbar isShowLogo={false} isShowFilter={false} />
         {videoUrl && <Video url={videoUrl} />}
         <Info {...{ name, tags, content, cast }} />
         {isTVShow && (
