@@ -1,4 +1,3 @@
-import NavBarGenre from "@/components/NavBarGenre";
 import React from "react";
 
 interface PageProps {
@@ -8,11 +7,7 @@ interface PageProps {
 function page({ params }: PageProps) {
   const { genre } = params;
 
-  return (
-    <div>
-      <NavBarGenre genre={genre} />
-    </div>
-  );
+  return <div>{/* <NavBarGenre genre={genre} /> */}</div>;
 }
 
 export default page;
