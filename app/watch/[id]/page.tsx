@@ -76,9 +76,14 @@ async function page({ params, searchParams }: PageProps) {
       </div>
 
       <GenreFilmCardList
-        title={"Phim truyền hình chính kịch Hàn Quốc"}
+        title={"More Like This"}
         films={TVShowInfoList}
         targetTag="han-quoc"
+      />
+      <GenreFilmCardList
+        title={"Today Tops Pick For You"}
+        films={TVShowInfoList}
+        targetTag="chinese"
       />
     </div>
   );

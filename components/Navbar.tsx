@@ -44,14 +44,14 @@ function Navbar({
           {!typeFilm && (
             <>
               <Link className="nav-button" href="/tvshow">
-                Phim T.Hình
+                Serie TV
               </Link>
               <Link className="nav-button" href="/movie">
-                Phim
+                Film
               </Link>
             </>
           )}
-          <GenreButton typeFilm="movie" name="Thể Loại" />
+          <GenreButton typeFilm="movie" name="Categorie" />
         </div>
       )}
     </div>

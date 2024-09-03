@@ -23,9 +23,14 @@ export default async function Home(): Promise<JSX.Element> {
       </div>
       <section className="-mt-72 pb-40 flex flex-col gap-5">
         <GenreFilmCardList
-          title={"Phim truyền hình chính kịch Hàn Quốc"}
+          title={"Korean TV Shows"}
           films={TVShowInfoList}
           targetTag="han-quoc"
+        />
+        <GenreFilmCardList
+          title={"Chinese Movies"}
+          films={TVShowInfoList}
+          targetTag="chinese"
         />
       </section>
     </main>

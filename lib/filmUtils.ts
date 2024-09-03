@@ -7,7 +7,7 @@ import {
   TypeFilm,
 } from "./filmType";
 
-const FILM_DATA_HOST = "https://film-data.vercel.app";
+const FILM_DATA_HOST = "http://localhost:3000/data";
 
 const constructFilmDataUrl = (path: string) => `${FILM_DATA_HOST}/${path}`;
 
